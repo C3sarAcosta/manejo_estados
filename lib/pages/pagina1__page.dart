@@ -63,15 +63,11 @@ class InformacionUsuario extends StatelessWidget {
           ),
           Text('Materias'),
           Divider(),
-          ListTile(
-            title: Text('Moviles II'),
+          ...usuario.materias.map(
+            (e) => ListTile(
+              title: Text(e),
+            ),
           ),
-          ListTile(
-            title: Text('Inteligencia Artificial'),
-          ),
-          ListTile(
-            title: Text('Web II'),
-          )
         ],
       ),
     );

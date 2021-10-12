@@ -36,7 +36,10 @@ class Pagina2Page extends StatelessWidget {
             color: Colors.orange,
             child:
                 Text('Agregar Materia', style: TextStyle(color: Colors.white)),
-            onPressed: () {},
+            onPressed: () {
+              usuarioCtrl.agregarMateria(
+                  'Materia #${usuarioCtrl.usuario.value.materias.length + 1}');
+            },
           ),
         ]),
       ),
