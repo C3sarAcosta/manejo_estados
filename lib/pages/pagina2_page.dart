@@ -41,6 +41,14 @@ class Pagina2Page extends StatelessWidget {
                   'Materia #${usuarioCtrl.usuario.value.materias.length + 1}');
             },
           ),
+          MaterialButton(
+            color: Colors.orange,
+            child: Text('Cambiar Tema'),
+            onPressed: () {
+              Get.changeTheme(
+                  Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+            },
+          ),
         ]),
       ),
     );
