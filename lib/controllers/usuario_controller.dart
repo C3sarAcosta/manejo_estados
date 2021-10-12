@@ -17,4 +17,11 @@ class UsuarioController extends GetxController {
       val!.edad = edad;
     });
   }
+
+  void agregarMateria(String materia) {
+    this.usuario.update((val) {
+      //...sprep
+      val!.materias = [...val.materias, materia];
+    });
+  }
 }
